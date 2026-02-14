@@ -1,0 +1,111 @@
+# HPCID Writing Examples
+
+## Executive Summary Builder
+
+### Metaphor frame (M)
+- Treat the paper as a coastline, and your summary as a nautical chart.
+- **Mapping:**
+  - Claims → landmarks
+  - Evidence/method → sounding lines (depth checks)
+  - Contributions → lighthouses
+  - Limitations → reefs
+- **Purpose:** the metaphor adds interpretive flexibility, but every feature on the “chart” must still match the coastline (the core).
+
+### Recoverable core (C)
+- Produce a faithful executive summary (≤250 words) that preserves the paper’s main claim(s), method, key result(s), and stated limitations—without adding new facts.
+
+### Tiered redundancy (R)
+Three parallel restatements that must all entail **C**:
+
+1) **Linguistic tier**
+   - “Write a ≤250-word executive summary that matches the paper’s claims and results exactly, including limitations.”
+
+2) **Structural tier**
+   - Output in 4 bullets: (1) Problem, (2) Approach, (3) Results, (4) Limitations. No extra claims.
+
+3) **Conceptual tier (metaphor-anchored)**
+   - “Draw a chart: mark only landmarks that truly exist in the text; don’t invent lighthouses, and label reefs if the paper names them.”
+
+### Tautological anchor (A)
+- “A summary is faithful because it preserves the core; it preserves the core because faithfulness is defined as not leaving the core.”
+
+### Recursive cascade with prefix-constrained parallelism (H)
+
+**[Core]**
+- **C:** Faithful ≤250-word executive summary with problem/approach/results/limitations; no new facts.
+
+**[Core, Secondary]**
+- **S:** If uncertain, prefer omission + explicit uncertainty over invention; keep wording conservative.
+
+**[Core, Secondary, Tertiary]**
+- **T:** Procedure: extract (a) 1–3 main claims, (b) method, (c) 1–3 results, (d) limitations; then compress into the 4-bullet format.
+
+**[Core, Secondary, Tertiary, (quaternary_process-a)]**
+- **Route A (Extraction-first):** quote-skim → list claims/evidence/results/limits → compress → final check against C.
+
+**[Core, Secondary, Tertiary, (quaternary_process-b)]**
+- **Route B (Structure-first):** draft 4 bullets with placeholders → fill from text → delete anything not explicitly supported → final check against C.
+
+### Termination / loopback (L)
+- If the draft contains any claim not traceable to the input text, collapse back to the nearest stable prefix (**[Core, Secondary, Tertiary]**) and re-draft using only extracted items.
+
+### Output contract
+- Exactly 4 bullets labeled **Problem / Approach / Results / Limitations**.
+- ≤250 words total.
+- No citations unless the user provided citation format requirements.
+
+---
+
+## Methodology Transpiler
+
+### Metaphor frame (M)
+- Treat the source as a blueprint, and the markdown set as a building: each section is a room; invariants are load-bearing beams.
+- **Mapping:**
+  - Core definitions → beams
+  - Examples → windows (visibility)
+  - Evaluation plan → inspection checklist
+  - Limitations → stress tests
+- **Purpose:** metaphor allows flexible phrasing, but you must not move load-bearing beams.
+
+### Recoverable core (C)
+- Convert the source into a coherent set of markdown docs that preserves: (i) the four HPCID requirements, (ii) the canonical cascade form, (iii) the compliance/evaluation checklist concepts—without inventing new claims.
+
+### Tiered redundancy (R)
+Three parallel restatements that must all entail **C**:
+
+1) **Linguistic tier**
+   - “Create a markdown doc set that faithfully restates the method, operators, and checks from the source.”
+
+2) **Structural tier**
+   - Produce files: `00_overview.md`, `01_requirements.md`, `02_cascade_format.md`, `03_compliance_checks.md`, `04_examples.md`.
+
+3) **Conceptual tier (metaphor-anchored)**
+   - “Rebuild the same house in markdown: beams stay in the same place; only the paint (phrasing) can change.”
+
+### Tautological anchor (A)
+- “The doc set is correct if it preserves the core; preserving the core is what ‘correct’ means for this transpilation.”
+
+### Recursive cascade with prefix-constrained parallelism (H)
+
+**[Core]**
+- **C:** Preserve the method’s four requirements + canonical cascade form + compliance checklist concepts; no new assertions.
+
+**[Core, Secondary]**
+- **S:** Keep terminology stable (Core/Secondary/Tertiary, redundancy tiers, loopback); annotate anything that is interpretation vs. direct restatement.
+
+**[Core, Secondary, Tertiary]**
+- **T:** Procedure: extract the method primitives → outline markdown files → fill each file with (a) definition, (b) rationale, (c) operational test, (d) pitfalls.
+
+**[Core, Secondary, Tertiary, (quaternary_process-a)]**
+- **Route A (Top-down):** outline doc tree → write stubs → fill sections → cross-check against extracted primitives.
+
+**[Core, Secondary, Tertiary, (quaternary_process-b)]**
+- **Route B (Bottom-up):** extract quotes/claims → cluster by primitive → assemble into files → rewrite for clarity without changing meaning.
+
+### Termination / loopback (L)
+- If any section begins to “improve” the method with new requirements/claims, collapse to **[Core, Secondary]** and rewrite using only extracted primitives.
+
+### Output contract
+- Output as a folder-like list of markdown filenames with their full contents.
+- Each file begins with a 1–2 line purpose statement.
+- Include a final **Consistency Checklist** in `03_compliance_checks.md`.
